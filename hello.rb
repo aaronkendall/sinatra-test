@@ -10,6 +10,7 @@ get '/secret' do
 end
 
 get '/hello' do
-    @visitor = params[:name]
-    erb :index
+  @name = %w(Lazarus JamesDean Ian).sample
+  @visitor = params[:name]
+  erb :index
 end
